@@ -18,10 +18,12 @@ one-liner:
 
 ## Coverage
 The modules are expected to be checked 
-| Module  | nosetest coverage | pytest_coverage | Comment                                            |     |
-| ------- | ----------------- | --------------- | -------------------------------------------------- | --- |
-| moduleA | 100%              |                 |                                                    |     |
-| moduleB | 100%              |                 | Make sure results from moduleA are not overwritten |     |
-| moduleC |                   | 100%            |                                                    |     |
-| moduleD |                   | 100%            | Make sure results from moduleC are not overwritten |     |
-| moduleE | 86%               | 86 %            | Combined: 100%                                     |     |
+| Module  | nosetest coverage | pytest_coverage | rostest-nosetest | rostest-pytest | Comment                                            |     |
+| ------- | ----------------- | --------------- | ---------------- | -------------- | -------------------------------------------------- | --- |
+| moduleA | 100%              |                 |                  |                |                                                    |     |
+| moduleB | 100%              |                 |                  |                | Make sure results from moduleA are not overwritten |     |
+| moduleC |                   | 100%            |                  |                |                                                    |     |
+| moduleD |                   | 100%            |                  |                | Make sure results from moduleC are not overwritten |     |
+| moduleE | 86%               | 86 %            |                  |                | Combined: 100%                                     |     |
+| moduleF |                   |                 | 100%             |                |                                                    |     |
+| moduleG |                   |                 |                  | 100%           |                                                    |     |

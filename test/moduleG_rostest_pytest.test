@@ -1,0 +1,11 @@
+<launch>
+  <arg name="coverage" default="false"/>
+  <arg name="pythontest_launch_prefix" value="$(eval 'python-coverage run -p' if arg('coverage') else '')"/>
+
+  <node name="moduleG_node" pkg="mixed_test_type_package" type="moduleG_node.py"
+   launch-prefix="$(arg pythontest_launch_prefix)"/>
+
+  <!-- See Readme on https://github.com/machinekoder/ros_pytest -->
+  <param name="test_module" value="$(find mixed_test_type_package)/test/moduleG_rostest_pytest.py"/>
+  <test test-name="test_lib" pkg="ros_pytest" type="ros_pytest_runner" />
+</launch>

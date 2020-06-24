@@ -33,6 +33,9 @@ if(CATKIN_ENABLE_TESTING)
   catkin_add_nosetests(test/moduleE_unittest.py)
   add_pytests(test/moduleE_pytest.py)
 
+  ## ROSTESTS
+  add_rostest(test/moduleF_rostest_unittest.test ARGS coverage:=ENABLE_COVERAGE_TESTING)
+  add_rostest(test/moduleG_rostest_pytest.test ARGS coverage:=ENABLE_COVERAGE_TESTING)
 
   # Fasest way to generate coverage - Make sure to run the test in sequence:
   # catkin_make -DCMAKE_BUILD_TYPE=Debug -DENABLE_COVERAGE_TESTING=ON tests
